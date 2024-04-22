@@ -1,6 +1,5 @@
 class PatientRecord {
-  int encounterId;
-  int patientNbr;
+
   String race;
   String gender;
   String age;
@@ -8,7 +7,6 @@ class PatientRecord {
   int dischargeDispositionId;
   int admissionSourceId;
   int timeInHospital;
-  String payerCode;
   int numLabProcedures;
   int numProcedures;
   int numMedications;
@@ -26,8 +24,8 @@ class PatientRecord {
   String readmitted;
 
   PatientRecord({
-    required this.encounterId,
-    required this.patientNbr,
+
+
     required this.race,
     required this.gender,
     required this.age,
@@ -35,7 +33,6 @@ class PatientRecord {
     required this.dischargeDispositionId,
     required this.admissionSourceId,
     required this.timeInHospital,
-    required this.payerCode,
     required this.numLabProcedures,
     required this.numProcedures,
     required this.numMedications,
@@ -55,8 +52,7 @@ class PatientRecord {
 
   factory PatientRecord.fromJson(Map<String, dynamic> json) {
     return PatientRecord(
-      encounterId: json['encounter_id'],
-      patientNbr: json['patient_nbr'],
+
       race: json['race'],
       gender: json['gender'],
       age: json['age'],
@@ -64,7 +60,6 @@ class PatientRecord {
       dischargeDispositionId: json['discharge_disposition_id'],
       admissionSourceId: json['admission_source_id'],
       timeInHospital: json['time_in_hospital'],
-      payerCode: json['payer_code'],
       numLabProcedures: json['num_lab_procedures'],
       numProcedures: json['num_procedures'],
       numMedications: json['num_medications'],
@@ -85,8 +80,6 @@ class PatientRecord {
 
   Map<String, dynamic> toJson() {
     return {
-      'encounter_id': encounterId,
-      'patient_nbr': patientNbr,
       'race': race,
       'gender': gender,
       'age': age,
@@ -94,7 +87,6 @@ class PatientRecord {
       'discharge_disposition_id': dischargeDispositionId,
       'admission_source_id': admissionSourceId,
       'time_in_hospital': timeInHospital,
-      'payer_code': payerCode,
       'num_lab_procedures': numLabProcedures,
       'num_procedures': numProcedures,
       'num_medications': numMedications,
